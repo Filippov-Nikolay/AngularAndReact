@@ -1,0 +1,8 @@
+Введение в Angular
+Angular - это фреймворк
+Angular: js, typescript
+AngularJs: js
+Angular - использует язык TypeScript(TS)
+TS - типизированное надмножество языка JS, компилируется в чистый JS
+
+tsc namefile.ts - Запуск компиляции 

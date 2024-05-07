@@ -1,0 +1,29 @@
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+.menu__item {
+}
+.menu__item:not(:last-child) {
+    margin-right: 25px;
+}
+.menu__link {
+    font-weight: 700;
+    font-size: 22px;
+
+    color: #2a2a2a;
+    transition: color .5s ease;
+}
+.menu__link:hover {
+    color: #3c87ff;
+}

@@ -1,0 +1,10 @@
+div {
+    display: flex;
+    align-items: center;
+    padding: 25px 10px;
+    background-color: burlywood;
+}
+p {
+    color: #fff;
+    font-size: 20px;
+}

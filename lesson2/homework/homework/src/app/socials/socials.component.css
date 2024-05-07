@@ -1,0 +1,20 @@
+.social {
+    display: flex;
+    align-items: center;
+}
+.social__item {
+}
+.social__item:not(:last-child) {
+    margin-right: 25px;
+}
+.social__link {
+    max-width: 32px;
+    filter: grayscale(1);
+
+    transition: filter .5s ease;
+}
+.social__link:hover {
+    filter: grayscale(0);
+}
+.social__img {
+}

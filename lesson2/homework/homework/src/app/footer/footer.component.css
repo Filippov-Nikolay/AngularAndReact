@@ -1,0 +1,28 @@
+.footer {
+    padding: 25px 0;
+    background: #323232;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+
+    color: #fff;
+}
+.footer__item {
+}
+.footer__title {
+    margin-bottom: 5px;
+}
+.list {
+}
+.list__item {
+}
+.list__item:not(:last-child) {
+    margin-bottom: 3px;
+}
+.list__link {
+    color: #fff;
+}
+.list__link:hover {
+    text-decoration: underline;
+}

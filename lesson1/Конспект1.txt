@@ -1,4 +1,4 @@
-Введение в Angular
+Лекция 1. Введение в Angular
 Angular - это фреймворк
 Angular: js, typescript
 AngularJs: js

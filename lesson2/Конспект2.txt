@@ -1,8 +1,11 @@
 Лекция 2
-Создание проекта: ng new my-first-project
+
+Создание проекта: ng new my-first-project (CSS, N)
 Переход в директорию с проектом: cd my-first-project
 Запуск: ng serve/npm start
+
 Установка модулей(локально для проекта): npm install
+
 Без файла package.json в структуре проекта, модули node не устанавливаются
 angular.json - не рекомендуется менять связь! (Настройки ангуляра)
 

@@ -1,0 +1,50 @@
+<div class="container">
+    <header class="header">
+        <div class="header__item">
+            <div class="header__img-wrapper">
+                <img class="header__img" src="{{imgSrc}}" alt="{{imgAlt}}">
+            </div>
+            <h2 class="header__title">Профиль</h2>
+        </div>
+        <div class="header__item">
+            <div class="info">
+                <h1 class="info__title">{{name}} {{lastName}}</h1>
+                <h3 class="info__sub-title">{{profession}}</h3>
+            </div>
+            <ul class="social">
+                <li class="social__item"><img class="social__img" src="../assets/icons/telephone.png" alt="icon-home-phone"><a class="social__text" href="tel:{{homePhome}}" target="_blank">{{homePhome}}</a></li>
+                <li class="social__item"><img class="social__img" src="../assets/icons/world-wide-web.png" alt="icon-website"><a class="social__text" href="{{website}}" target="_blank">{{website}}</a></li>
+                <li class="social__item"><img class="social__img" src="../assets/icons/smartphone-call.png" alt="icon-phone"><a class="social__text" href="tel:{{phone}}" target="_blank">{{phone}}</a></li>
+                <li class="social__item"><img class="social__img" src="../assets/icons/email.png" alt="icon-email"><a class="social__text" href="mailto:{{email}}" target="_blank">{{email}}</a></li>
+                <li class="social__item"><img class="social__img" src="../assets/icons/github.png" alt="icon-github"><a class="social__text" href="mailto:{{github}}" target="_blank">{{github}}</a></li>
+            </ul>
+            <ul class="app-info">
+                <li class="app-info__item">
+                    <span class="app-info__text-name">Дата рождения:</span><span class="app-info__text-value">{{dateOfBirth}}</span>
+                </li>
+                <li class="app-info__item">
+                    <span class="app-info__text-name">Город:</span><span class="app-info__text-value">{{city}}</span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="section__wrapper">
+            <h2 class="section__title">Обо мне</h2>
+            <div class="section__content">
+                <p>{{sectionContentAboutMe}}</p>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="section__wrapper">
+            <h2 class="section__title">Навыки</h2>
+            <div class="section__content">
+                <ul class="skills">
+                    <li class="skills__item" *ngFor="let sill of skills">{{sill}}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

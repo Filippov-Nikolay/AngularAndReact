@@ -1,0 +1,17 @@
+<header class="header">
+    <div class="header__content">
+        <ul class="element">
+            <li class="element__item">Type: {{transport[index].typeTransport | uppercase}}</li>
+            <li class="element__item">Model: {{transport[index].model | uppercase}}</li>
+            <li class="element__item">Weight: {{transport[index].weight}} t</li>
+            <li class="element__item">Width: {{transport[index].width}} m</li>
+            <li class="element__item">Height: {{transport[index].height}} m</li>
+            <li class="element__item">Length: {{transport[index].length}} m</li>
+        </ul>
+    </div>
+    <div class="header__wrapper">
+        <button class="btn btn__item" (click)="showCar()">Нажать (показать машину)</button>
+        <button class="btn btn__item" (click)="showPlane()">Нажать (показать самолёт)</button>
+        <button class="btn btn__item" (click)="showShip()">Нажать (показать корабль)</button>
+    </div>
+</header>

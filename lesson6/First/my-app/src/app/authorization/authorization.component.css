@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* color: #fff; */
+
+    /* background: url('https://99px.ru/sstorage/53/2011/11/tmb_27176_1319.jpg') no-repeat center top/cover; */
+}
+.container {
+    padding: 25px;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.header__title {
+    margin-bottom: 55px;
+
+    text-transform: uppercase;
+}
+.form {
+    display: block;
+}
+.form__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.form__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+.form__item input {
+    padding: 2px 0;
+}
+.btn {
+    display: block;
+
+    margin: 0 auto;
+    padding: 5px;
+}

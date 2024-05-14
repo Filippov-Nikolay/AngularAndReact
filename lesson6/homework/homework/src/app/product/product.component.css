@@ -1,0 +1,36 @@
+.wrapper {
+    padding: 0 16px;
+
+    border-right: 1px solid #e9e9e9;
+}
+.wrapper__content {
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+}
+.wrapper__title {
+    padding: 4px 0;
+
+    font-size: 18px;
+    color: #3e77aa;
+}
+.wrapper__title--center {
+    text-align: center;
+}
+.wrapper__title:hover {
+    color: #f84147;
+    text-decoration: underline;
+}
+.list {
+}
+.list__item {
+    padding: 4px 0;
+
+    font-size: 14px;
+    color: #3e77aa;
+}
+.list__item:hover {
+    color: #f84147;
+    text-decoration: underline;
+}

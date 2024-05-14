@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="wrapper__content">
+        <img class="wrapper__img" src="{{imgSrc}}" alt="{{imgAlt}}">
+        <h2 class="wrapper__title" [class.wrapper__title--center]="isCenter">{{title}}</h2>
+        <ul class="list" *ngIf="addInfo.length != 0">
+            <li class="list__item" *ngFor="let item of addInfo">{{item}}</li>
+        </ul>
+    </div>
+</div>

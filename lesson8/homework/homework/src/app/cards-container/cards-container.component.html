@@ -1,0 +1,22 @@
+<div class="page">
+    <button class="btn btn__discount" [class.btn__discount--active]="btnActiveF" (click)="applyDiscount(15)">Хочу скидку</button>
+    <div class="product">
+        <div class="product__item" *ngFor="let product of products; let i = index;">
+            <app-card-block class="product__item" *ngIf="filter == products[i].name || filter == 'all'"
+            [id]="products[i].id"
+            [name]="products[i].name"
+            [price]="products[i].price"
+            [discount]="discount"
+            [filter]="filter"
+            (idEvent)="idInfoApp($event)"
+            ><div class="card-block__color" [style.background-color]="products[i].color"><b>{{products[i].color}}</b></div></app-card-block>
+        </div>
+    </div>
+    <div class="product-search">
+        <label class="product-search__label" for="search">Filter: </label>
+        <input class="product-search__input" name="search" type="text" [(ngModel)]="filter">
+    </div>
+    <div class="product-info">
+        {{products[indexId].description}}
+    </div>
+</div>

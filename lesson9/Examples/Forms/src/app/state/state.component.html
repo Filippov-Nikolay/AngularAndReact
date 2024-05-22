@@ -1,0 +1,18 @@
+<div>
+  <div>
+      <label>Имя</label><br>
+      <input name="name" [(ngModel)]="user.name" #name="ngModel" required />
+  </div>
+  <div>
+      <label>Email</label><br>
+      <input name="email" type="email" [(ngModel)]="user.email" #email="ngModel"
+          required email />
+  </div>
+  <div>
+      <label>Телефон</label><br>
+      <input  name="phone" [(ngModel)]="user.phone" #phone="ngModel"
+          required pattern="[0-9]{11}" />
+  </div>
+  <button [disabled]="name.invalid || email.invalid || phone.invalid"
+      (click)="addUser()">Добавить</button>
+</div>

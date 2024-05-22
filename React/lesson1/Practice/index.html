@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" class="info"></div>
+    <div id="app2" class="info"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const user = {
+            age: 19,
+            firstName: 'Nikolay',
+            lastName: 'Filippov',
+            email: 'filippovnikolay195@gmail.com',
+            phone: '+380980565970',
+            getFullName: function(){ 
+                return `${this.firstName} ${this.lastName}`;
+            }
+        };
+        const city = {
+            nameCity: 'Odessa',
+            nameCounty: 'Ukraine',
+            yearFoundation: 1794,
+            images: [
+                'https://vgorode.ua/img/article/11788/24_main-v1632136806.jpg',
+                'https://odessa.comments.ua/img/publications/880x586/pecDqv2Okyk_nwW-9VlJ-Wstoj-SpgxC.jpg',
+                'https://photos.drymba.com/drb/001/216/46603_3e4_ht8ml8.jpg'
+            ]
+        }
+        const userClassName = "user-info";
+        const cityClassName = "city-info";
+
+        ReactDOM.createRoot(document.getElementById("app")).render(
+            <div className={userClassName}>
+                <p>Полное имя: {user.getFullName()}</p>
+                <p>Возраст: {user.age}</p>
+                <p>Почта: {user.email}</p>
+                <p>Номаре телефона: {user.phone}</p>
+            </div>
+        );
+
+        ReactDOM.createRoot(document.getElementById("app2")).render(
+            <div className={cityClassName}>
+                <p>Название: {city.nameCity}</p>
+                <p>Страна: {city.nameCounty}</p>
+                <p>Год основания: {city.yearFoundation}</p>
+                <div class="grid">
+                    {city.images.map((imgSrc, index) => (
+                        <div class="grid__item">
+                            <img src={imgSrc} alt={`Image ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+   </script>
+</body>
+</html>

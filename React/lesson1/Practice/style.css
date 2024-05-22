@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/*NORMALIZE CSS*/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    font-family: 'Montserrat';
+}
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    writing-mode: vertical-rl;
+}
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+input {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+button {
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 5px;
+}
+.info {
+    padding: 10px 25px;
+
+    width: fit-content;
+
+    color: azure;
+
+    border: 1px solid #23252A;
+    background-color: #23252A;
+    border-radius: 5px;
+}
+.info:not(:last-child) {
+    margin-bottom: 15px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    margin-top: 20px;
+}
+.grid__item {
+    max-width: 450px;
+
+    overflow: hidden;
+    border-radius: 5px;
+}

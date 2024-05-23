@@ -1,0 +1,113 @@
+/*NORMALIZE CSS*/
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    writing-mode: vertical-rl;
+}
+ul, li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+input {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+button {
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+body {
+    font-family: 'Montserrat', 'Courier New', Courier, monospace;
+    color: #fff;
+}
+.page {
+    
+}
+.item {
+    margin: 10px auto;
+    padding: 15px 25px;
+
+    max-width: 50%;
+
+    background-color: #121214;
+    border-radius: 5px;
+}
+.item img {
+    max-width: 250px;
+}
+.item span {
+    font-weight: 700;
+}
+
+
+/* TASK 1 */
+.review {
+
+}
+.review__item {
+    
+}
+
+/* TASK 2 */
+.participants {
+    margin-bottom: 10px;
+
+    display: flex;
+}
+.participants__item {
+    
+}
+.participants__item:not(:last-child) {
+    margin-right: 15px;
+}
+.album-names {
+    margin-bottom: 10px;
+
+    display: flex;
+}
+.album-names__item {
+
+}
+.album-names__item:not(:last-child) {
+    margin-right: 15px;
+}
+.grid {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.grid__item {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ffffff63;
+}
+
+/* TASK 3 */
+.ingredients {
+    margin-bottom: 15px;
+}
+.ingredients__item {
+
+}
+.wrapper {
+}

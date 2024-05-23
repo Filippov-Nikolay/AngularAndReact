@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="page">
+        <div id="task1" class="item"></div>
+        <div id="task2" class="item"></div>
+        <div id="task3" class="item"></div>
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const book = {
+            nameBook: 'Четвертое крыло',
+            nameAuthor: 'Ребекка',
+            lastNameAuthor: 'Яррос',
+            genre: 'Фэнтези',
+            numberPages: 752,
+            review: [
+                'Это просто лучшее фентези за последнее время! Книгу читала еще через переводчик, глаза ломала, но было не оторватся, осталось в полном восторге! Сейчас купила книгу, буду перечитывать, но еще хочется послушать и аудиосериал! Определенно 5 звезд, но мысленно ставлю все 1000',
+                'Никому не секрет, что книга в топе уже несколько месяцев, и все книжные форумы, каналы и прочие вещи забиты благоговейными отзывами на это произведение. Обычно я топы не читаю, но тут описание заинтриговало и я решила попробовать.',
+                'Это просто лучшее фентези за последнее время! Книгу читала еще через переводчик, глаза ломала, но было не оторватся, осталось в полном восторге! Сейчас купила книгу, буду перечитывать, но еще хочется послушать и аудиосериал! Определенно 5 звезд, но мысленно ставлю все 1000',
+                'Никому не секрет, что книга в топе уже несколько месяцев, и все книжные форумы, каналы и прочие вещи забиты благоговейными отзывами на это произведение. Обычно я топы не читаю, но тут описание заинтриговало и я решила попробовать.'
+            ],
+            getFullName: function(){ 
+                return `${this.nameAuthor} ${this.lastNameAuthor}`;
+            }
+        };
+        const bookClassName = 'book-info';
+
+        ReactDOM.createRoot(document.getElementById("task1")).render(
+            <div className={bookClassName}>
+                <p><span>Название книги: </span>{book.nameBook}</p>
+                <p><span>Автор: </span>{book.getFullName()}</p>
+                <p><span>Жанр: </span>{book.genre}</p>
+                <p><span>Кол-во страниц: </span>{book.numberPages}</p>
+                <p><span>Отзывы: </span></p>
+                <ul class="review">
+                    {book.review.map((reviewItem, index) => (
+                        <li class="review__item">
+                            <p>{reviewItem}</p>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        );
+
+
+        const musicGroup = {
+            nameGroup: 'Hajime',
+            aliasesParticipants: [
+                'MiyaGi', 'AndyPand', 'TumaniYO', 'CASTLE', 'HLOY', 'Ollane', 'Mav-d', 'KADI'
+            ],
+            albumNames: [
+                'NARRATIVE', 'HATTORI', 'Yamakasi',
+            ],
+            albumCovers: [
+                'https://images.genius.com/6d9c86620c97a4a7ccf80ff01313ac87.1000x1000x1.png',
+                'https://i1.sndcdn.com/artworks-FgdXGBy8tWqFSzAw-n8AfNA-t500x500.jpg',
+                'https://i.ytimg.com/vi/CIfQQ7-SoTs/maxresdefault.jpg'
+            ]
+        }
+        const musicGroupClassName = 'musicGroup-info';
+
+        ReactDOM.createRoot(document.getElementById("task2")).render(
+            <div className={musicGroupClassName}>
+                <p><span>Название группы: </span>{musicGroup.nameGroup}</p>
+                <p><span>Участники:</span></p>
+                <ul class="participants">
+                    {musicGroup.aliasesParticipants.map((aliasesParticipantsItem, index) => (
+                        <li class="participants__item">
+                            <p>{aliasesParticipantsItem}</p>
+                        </li>
+                    ))}
+                </ul>
+                <p><span>Альбомы:</span></p>
+                <ul class="album-names">
+                    {musicGroup.albumNames.map((albumNamesItem, index) => (
+                        <li class="album-names__item">
+                            <p>{albumNamesItem}</p>
+                        </li>
+                    ))}
+                </ul>
+                <p><span>Обложки: </span></p>
+                <div class="grid">
+                    {musicGroup.albumCovers.map((imgSrc, index) => (
+                        <div class="grid__item">
+                            <img src={imgSrc} alt={`Image ${index + 1}`} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        );
+
+
+        const cookingRecipe = {
+            nameDish: 'РАТАТУЙ',
+            ingredients: [
+                '1 кабачок среднего размера',
+                '1 цукини среднего размера',
+                '1 баклажан среднего размера',
+                '10 томатов среднего размера',
+                '1 красный сладкий перец',
+                '3 веточки тимьяна',
+                '5 ст. л. подсолнечного масла',
+                'соль и перец по вкусу'
+            ],
+            cookingTime: 3, //h
+            picture: 'https://klopotenko.com/wp-content/uploads/2019/08/Ratatyj_siteWeb.jpg'
+        }
+        const cookingRecipeClassName = 'cookingRecipe-info';
+
+        ReactDOM.createRoot(document.getElementById("task3")).render(
+            <div className={cookingRecipeClassName}>
+                <p><span>Название блюда: </span>{cookingRecipe.nameDish}</p>
+                <p><span>Ингредиенты: </span></p>
+                <ul class="ingredients">
+                    {cookingRecipe.ingredients.map((ingredientsItem, index) => (
+                        <li class="ingredients__item">
+                            <p>{ingredientsItem}</p>
+                        </li>
+                    ))}
+                </ul>
+                <p><span>Время приготовления: </span>{cookingRecipe.cookingTime} часа</p>
+                <div class="wrapper">
+                    <p>Результат:</p>
+                    <img src={cookingRecipe.picture} alt=""/>
+                </div>
+                
+            </div>
+        );
+    </script>
+</body>
+</html>

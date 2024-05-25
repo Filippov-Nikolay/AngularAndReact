@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators, ReactiveFormsModule} from "@angular/forms";
+
 @Component({
   selector: 'app-react1',
   standalone: true,
@@ -7,6 +8,7 @@ import { FormsModule, FormGroup, FormControl, Validators, ReactiveFormsModule} f
   templateUrl: './react1.component.html',
   styleUrl: './react1.component.css'
 })
+
 export class React1Component {
   myForm : FormGroup;
   constructor(){
@@ -24,5 +26,4 @@ export class React1Component {
   submit(){
       console.log(this.myForm);
   }
-
 }

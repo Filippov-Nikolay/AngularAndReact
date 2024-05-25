@@ -18,7 +18,7 @@ class User{
 export class EditModelComponent {
   user = new User("", 18, "")
 
-  users: User[] = [];
+  // users: User[] = [];
   companies: string[] = ["Apple", "Microsoft", "Google", "Jetbrains"];
 
   logUser(name: NgModel, age: NgModel, company: NgModel){

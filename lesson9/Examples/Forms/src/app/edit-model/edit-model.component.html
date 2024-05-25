@@ -1,11 +1,11 @@
 <div>
   <p>
       <label>Имя пользователя</label><br>
-      <input name="name" [(ngModel)]="user.name" #userName="ngModel"/>
+      <input [(ngModel)]="user.name"  name="name" #userName="ngModel"/>
   </p>
   <p>
       <label>Возраст</label><br>
-      <input type="number" name="age" [(ngModel)]="user.age" #userAge="ngModel"/>
+      <input [(ngModel)]="user.age" type="number" name="age" #userAge="ngModel"/>
   </p>
   <p>
       <label>Место работы</label><br>

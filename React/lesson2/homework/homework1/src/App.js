@@ -1,8 +1,13 @@
 import './App.css';
+import { InfoMan } from './components/GreatMan';
+import { Task2 } from './components/Task2';
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <div className='App'>
+      <InfoMan></InfoMan>
+      <Task2></Task2>
+    </div>
   )
 }
 

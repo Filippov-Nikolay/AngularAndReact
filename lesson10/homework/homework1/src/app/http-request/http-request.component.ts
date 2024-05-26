@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from '../http.service';
-import { User } from '../User';
+import { User } from '../user';
 
 @Component({
   selector: 'app-http-request',

@@ -1,0 +1,32 @@
+button{
+    width: 100px;
+    height:30px;
+    border-radius: 4px;
+    margin:50px;
+}
+.on{
+    color:#666;
+    background-color: #ccc;
+}
+.off{
+    color:#888;
+    background-color: white;
+}
+
+.FancyBorder {
+    padding: 10px 10px;
+    border: 10px solid;
+  }
+  
+  .FancyBorder-blue {
+    border-color: blue;
+  }
+  
+  .Dialog-title {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .Dialog-message {
+    font-size: larger;
+  }
